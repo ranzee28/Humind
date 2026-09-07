@@ -8,8 +8,8 @@
 | Atribut | Keterangan |
 | :--- | :--- |
 | **Nama Dokumen** | Product Requirements Document (PRD) – Humind Platform |
-| **Versi Dokumen** | v1.1.0 |
-| **Status** | Approved Baseline – Enhanced with AI Navigator & Clinical Intake/Summary |
+| **Versi Dokumen** | v1.3.0 |
+| **Status** | Approved Baseline – Telecounseling Multi-Moda (Video/Voice/Chat), Daily Wellness, Panic Button & Sinergi Mood Tracker |
 | **Penulis Utama** | Tim Humind (Rozin, Alif, Atta, Laerra, Fadiyah) |
 | **Target Rilis MVP** | `[TBD - Target Sprint/Bulan Rilis]` |
 | **Platform Target** | **Fase 1:** Web Application (Mobile-First Responsive & PWA-Ready)<br>**Fase 2:** Cross-Platform Mobile App (React Native / Expo) |
@@ -35,11 +35,13 @@ Meskipun kebutuhan akan bantuan kesehatan mental sangat mendesak, terdapat juran
 
 ### 1.3. Value Proposition & Posisi Pasar
 **Humind** hadir menjembatani kepraktisan transaksional direktori telekonseling (ala Halodoc) dengan pendekatan holistik dan humanis (ala Riliv/Serene), yang secara spesifik dirancang untuk **segmen mahasiswa dan dewasa muda**:
-- **Humind Buddy (AI First-Listener & Navigator):** Asisten AI empatis 24/7 untuk teman curhat awal tanpa rasa malu, membantu memetakan masalah, serta merekomendasikan psikolog yang paling sesuai.
 - **Bahasa Manusia (Human-Centric Language):** Penemuan psikolog menggunakan filter masalah nyata mahasiswa, bukan klasifikasi penyakit medis.
-- **Mode Curhat Anonim (Safe Haven):** Memberikan kebebasan berekspresi menggunakan nama alias dalam sesi chat konseling, sementara kepatuhan administratif dan keamanan data rekam medis tetap terjaga di tingkat sistem.
+- **Mode Curhat Anonim (Safe Haven):** Memberikan kebebasan berekspresi menggunakan nama alias dalam sesi konseling, sementara kepatuhan administratif dan keamanan data rekam medis tetap terjaga di tingkat sistem.
+- **Unified Telecounseling Room (Video, Voice Call, & Real-Time Chat):** Ruang konsultasi 60 menit terintegrasi multi-moda (Video Call tatap muka untuk koneksi empati mendalam, Voice Call untuk privasi tinggi/hemat kuota, serta Chat Teks pendukung) yang berfokus penuh pada interaksi manusiawi tanpa beban pengisian laporan administratif pasca-sesi.
 - **Formulir Asesmen Pra-Konseling Singkat (Intake Form 3 Pertanyaan):** Mempersiapkan psikolog dengan konteks emosi klien sebelum sesi obrolan dimulai.
-- **Chat-First Counseling & Post-Session Summary:** Sesi teks interaktif 60 menit yang diakhiri dengan rangkuman catatan refleksi (*takeaways*) dan latihan mandiri (*action plan*) dari psikolog.
+- **Sinergi Mood Tracker ke Intake Form (Seamless Booking):** Integrasi satu-klik dari riwayat emosi harian ke formulir pra-konseling sehingga pengguna tidak perlu mengetik keluhannya dari nol saat memesan psikolog.
+- **Panic Button / Grounding Cepat 60 Detik:** Akses instan latihan pernapasan (*Box Breathing*) visual langsung dari beranda tanpa syarat login untuk menenangkan serangan panik seketika.
+- **Humind Buddy (AI First-Listener – Coming Soon Fase 2):** Sahabat AI interaktif 24/7 yang dipersiapkan pada Fase 2 (ditampilkan dalam bentuk kartu informatif *Coming Soon* pada rilis MVP).
 
 ---
 
@@ -126,27 +128,30 @@ Untuk menjaga fokus eksekusi tim beranggotakan 5 orang dan mencegah *scope creep
 
 ```
 +-------------------------------------------------------------------------------+
-| FASE 1: Core MVP (Fokus Transaksional Web, Konseling Utama, & AI Navigator)   |
+| FASE 1: Core MVP (Transaksional Web, Telekonseling Multi-Moda, Daily Wellness)|
 | 1. Modul Autentikasi & Profil Pengguna (Termasuk Setup Identitas Anonim)      |
 | 2. Direktori & Profil Psikolog Berlisensi (SIPP & Tarif Transparan)           |
 | 3. Filter Masalah Khas Mahasiswa (Human-Language Category)                    |
-| 4. Sistem Booking & Kalender Slot Waktu (Termasuk Intake Form 3 Pertanyaan)   |
+| 4. Sistem Booking & Kalender Slot Waktu (Pilihan Mode Sesi & Sinergi Intake)  |
 | 5. Integrasi Pembayaran Sederhana (Payment Gateway QRIS / Virtual Account)    |
-| 6. Ruang Konsultasi Web: Encrypted Real-Time Chat & Post-Session Summary      |
-| 7. Humind Buddy: AI First-Listener & Psychologist Matcher (Chatbot 24/7)      |
-| 8. SOP & Protokol Krisis Darurat (Disclaimer, Bantuan Cepat, Hotline SEJIWA)  |
-| 9. Standar Responsif Mobile-First & Konfigurasi PWA (Installable Shortcut)    |
+| 6. Ruang Telekonseling Terpadu: Video Call, Voice Call & Encrypted Chat 60m   |
+| 7. Daily Wellness: Daily Mood Tracker, Micro-Journaling, & Habit Check-in     |
+| 8. Panic Button / Grounding Cepat 60 Detik (Box Breathing Langsung di Beranda)|
+| 9. SOP & Protokol Krisis Darurat (Disclaimer, Bantuan Cepat, Hotline SEJIWA)  |
+| 10. Standar Responsif Mobile-First & Konfigurasi PWA (Installable Shortcut)   |
+| 11. Teaser Humind Buddy (Kartu Interaktif 'Coming Soon' Teman Curhat AI)      |
 +-------------------------------------------------------------------------------+
                                       │
                                       ▼
 +-------------------------------------------------------------------------------+
-| FASE 2: Retensi, Wellness Mandiri, & Ekspansi Native Mobile App               |
-| 1. Audio Meditasi & Sleep Aid (Panduan Box Breathing & Soundscapes)           |
-| 2. Mood Tracker & Jurnal Harian (Pre-Counseling Emotional Check-in)           |
-| 3. Artikel Edukasi Singkat (Bacaan Ringkas 2 Menit & Coping Strategy)         |
-| 4. Telekonseling Berbasis Video Call Terenkripsi                              |
-| 5. Aplikasi Mobile Native (React Native / Expo) dengan Push Notification      |
-| 6. Pemutar Audio Latar Belakang (Background Audio Player untuk Sleep Aid)     |
+| FASE 2: Retensi Lanjutan, AI Buddy 24/7, & Ekspansi Native Mobile App (Expo)  |
+| 1. Humind Buddy: AI First-Listener & Smart Matcher (Integrasi LLM Aktif 24/7) |
+| 2. Audio Meditasi & Sleep Aid (Panduan Box Breathing Audio & Soundscapes)     |
+| 3. Pola Analisis Emosi Lanjutan (AI Mood Trend Insights & Predictive Journal)  |
+| 4. Artikel Edukasi Singkat (Bacaan Ringkas 2 Menit & Coping Strategy)         |
+| 5. Group Support & Peer Sharing Circles (Ruang Saling Dengar Mahasiswa)       |
+| 6. Aplikasi Mobile Native (React Native / Expo) dengan Push Notification      |
+| 7. Pemutar Audio Latar Belakang (Background Audio Player untuk Sleep Aid)     |
 +-------------------------------------------------------------------------------+
 ```
 
@@ -162,6 +167,20 @@ Berdasarkan analisis kebutuhan pengguna (mahasiswa) dan kapasitas tim beranggota
    - Dibangun setelah alur bisnis tervalidasi pada versi web.
    - Menggunakan **React Native (Expo)** agar Rozin dan Alif dapat memanfaatkan kembali hingga 70-80% logika bisnis (API services, custom hooks, state management, dan socket parser) yang telah ditulis di React Web tanpa harus mempelajari bahasa baru seperti Dart/Flutter.
    - Membuka kapabilitas perangkat keras native: *Native Push Notifications* untuk pengingat jadwal konsultasi dan *Background Audio Playback* untuk fitur audio meditasi saat layar ponsel mati.
+
+### 5.3. Arsitektur Antarmuka: Pemisahan Zona Publik vs Dashboard Aplikasi (Dual-State Interface)
+Untuk mengatasi perbedaan tujuan pengguna antara *calon klien* yang baru datang dengan *klien aktif*, antarmuka web Humind dibagi secara terstruktur menjadi dua zona utama:
+
+1. **Zona Publik (Public Landing Page - Rute `/`):**
+   * **Target:** Pengunjung umum / belum terautentikasi (mengadopsi efektivitas visual Riliv Web).
+   * **Konten Inti:** Hero section persuasif ("Tempat Pikiranmu Beristirahat dan Didengar"), statistik kredibilitas & nomor izin SIPP, filter cepat direktori psikolog, widget mengambang Humind Buddy, serta tombol CTA *"Daftar / Masuk"*.
+   * **Navigasi:** Menggunakan *Top Navbar* standar dengan logo, tautan informasi, dan tombol autentikasi.
+2. **Zona Aplikasi (Authenticated App Dashboard - Rute `/app/*` atau `/dashboard`):**
+   * **Target:** Klien yang telah login / terautentikasi (mengadopsi efektivitas *in-app daily experience* Riliv Mobile).
+   * **Konten Inti:** Sapaan personal (*"Hai, [Nama/Alias]"*), kartu Mood Check-in 10 detik, kartu *Lanjutkan Journal* / kebiasaan sehat harian, serta kartu tiket sesi konseling aktif.
+   * **Navigasi Adaptif (*Responsive Behavior*):**
+     * **Pada Layar Desktop / Laptop ($\ge 768\text{px}$):** Menggunakan *Top Navbar* atau *Sidebar* modern yang memuat menu Dashboard, Konseling, Wellness, dan Profil Pengguna.
+     * **Pada Layar Smartphone ($< 768\text{px}$ / PWA):** Menu otomatis berpindah ke **Bottom Navigation Bar** di bawah layar (`Home`, `Konseling`, `Wellness`, `Profil`) demi kenyamanan jempol (*thumb-zone accessibility*) layaknya membuka aplikasi mobile native.
 
 ---
 
@@ -183,15 +202,20 @@ Berdasarkan analisis kebutuhan pengguna (mahasiswa) dan kapasitas tim beranggota
 2. **Kerahasiaan di Ruang Konsultasi:**
    - Apabila Mode Curhat Anonim aktif, antarmuka psikolog hanya menampilkan `Alias Name` dan data konteks umum (misal: kategori masalah dan usia), tanpa menampilkan nama lengkap, email, atau nomor telepon pribadi pengguna.
    - Rekam medis/catatan klinis terikat secara aman pada entitas akun pengguna di database terisolasi.
+3. **Onboarding Portal & Future Campus Teaser (Coming Soon):**
+   - Pada halaman selamat datang/login awal, antarmuka menyajikan pemilih jalur:
+     - **Mahasiswa Mandiri / Personal (Aktif):** Alur pendaftaran mandiri standar (B2C) dengan pembayaran per sesi.
+     - **Mahasiswa Kampus Mitra (Badge: *Coming Soon*):** Jalur kemitraan universitas (B2B2C). Ketika diklik, memunculkan modal informatif: *"Segera Hadir: Akses konseling gratis tersubsidi via SSO kampusmu! Ingin BEM/Kampusmu bermitra dengan Humind? [Ajukan Kemitraan Kampus]"*.
 
 #### Main Flow (Alur Utama):
-1. Pengguna membuka halaman pendaftaran/login Humind.
+1. Pengguna membuka halaman pendaftaran/login Humind dan memilih opsi *"Mahasiswa Mandiri"*.
 2. Pengguna mendaftarkan akun menggunakan email dan kata sandi yang aman.
 3. Pada saat melengkapi profil awal atau sebelum memulai sesi konseling, pengguna diberikan opsi: *"Gunakan Nama Asli"* atau *"Gunakan Nama Samaran (Mode Curhat Anonim)"*.
 4. Pengguna memilih Mode Curhat Anonim dan memasukkan nama alias yang diinginkan.
 5. Sistem menyimpan alias tersebut dan menetapkannya sebagai tampilan publik pada ruang chat konseling.
 
 #### Alternative & Edge Cases:
+- **Pengguna Mengklik Tombol Mahasiswa Kampus Mitra:** Sistem tidak mengarahkan ke error 404, melainkan membuka modal pop-up informatif program kemitraan kampus (*coming soon teaser*) lengkap dengan formulir singkat kontak BEM/kemahasiswaan.
 - **Pengguna Ingin Mengubah Alias:** Pengguna dapat mengubah nama samaran melalui menu pengaturan profil sebelum sesi booking baru dimulai.
 - **Penggunaan Nama Samaran Tidak Pantas/SARA:** Sistem memvalidasi alias terhadap daftar kata terlarang (*blacklist keywords*). Jika terdeteksi, sistem meminta pengguna memasukkan alias alternatif.
 
@@ -200,6 +224,7 @@ Berdasarkan analisis kebutuhan pengguna (mahasiswa) dan kapasitas tim beranggota
 - [ ] Terdapat opsi input `Alias Name` pada profil pengguna.
 - [ ] Di sisi psikolog, saat sesi chat berlangsung, nama yang tertera adalah `Alias Name` jika pengguna mengaktifkannya.
 - [ ] Data nama asli pengguna tidak pernah dikirim ke antarmuka klien psikolog pada saat mode anonim aktif.
+- [ ] Halaman login/onboarding awal memuat tombol pembeda jalur Mahasiswa Mandiri (aktif) dan Mahasiswa Kampus Mitra (badge *Coming Soon* dengan modal interaktif).
 
 ---
 
@@ -213,17 +238,19 @@ Berdasarkan analisis kebutuhan pengguna (mahasiswa) dan kapasitas tim beranggota
 #### Business Rules (BR-1.2):
 1. **Wajib Nomor SIPP (Kredibilitas):** Setiap profil psikolog yang dipublikasikan **wajib** mencantumkan Nomor Surat Izin Praktik Psikologi (SIPP) aktif yang terverifikasi. Profil tanpa SIPP tidak dapat ditampilkan di direktori publik.
 2. **Kategori Filter Bahasa Manusia (Killer Feature Segmen Kampus):**
-   Direktori tidak menggunakan kategori klinis kaku (misal: "Bipolar Type I", "Major Depressive Disorder"), melainkan 4 kategori bahasa manusia yang relatable bagi mahasiswa:
-   - **Burnout Tugas:** Khusus kelelahan akademik, skripsi macet, stres ekspektasi prestasi.
-   - **Kecemasan Finansial:** Khusus biaya kuliah, biaya hidup anak rantau, krisis karir pertama.
-   - **Insomnia & Overthinking:** Khusus pola tidur kacau, pikiran berputar di malam hari, kecemasan masa depan.
-   - **Toxic Circle:** Khusus dinamika pertemanan kampus yang melelahkan, konflik organisasi, atau masalah relasi asmara.
+   Direktori tidak menggunakan kategori klinis kaku (misal: "Bipolar Type I", "Major Depressive Disorder"), melainkan 6 kategori bahasa manusia yang relatable bagi mahasiswa:
+   - **Burnout Tugas:** Khusus kelelahan akademik, skripsi macet, tugas menumpuk, stres ekspektasi IPK/prestasi.
+   - **Kecemasan Finansial:** Khusus biaya kuliah (UKT), biaya hidup anak rantau, pengelolaan uang saku bulanan, dan tekanan finansial keluarga.
+   - **Insomnia & Overthinking:** Khusus pola tidur kacau, pikiran berputar di malam hari (*night rumination*), dan kecemasan tanpa sebab jelas.
+   - **Toxic Circle & Hubungan:** Khusus dinamika pertemanan kampus yang melelahkan, konflik organisasi/kepanitiaan, *people-pleasing*, atau masalah relasi asmara.
+   - **Krisis Arah Karir:** Khusus kebingungan prospek pasca-lulus, merasa salah jurusan, krisis karir pertama (*quarter-life crisis*), dan kecemasan memasuki dunia kerja.
+   - **Insecurity & Krisis PD:** Khusus rasa minder akibat perbandingan sosial di medsos/LinkedIn, *imposter syndrome*, takut presentasi/bicara di depan umum, dan masalah citra diri (*self-worth*).
 3. **Transparansi Tarif:** Tarif per sesi konseling (misalnya durasi 60 menit) harus ditampilkan eksplisit tanpa biaya administrasi terselubung.
 
 #### Main Flow (Alur Utama):
 1. Pengguna membuka halaman Direktori Psikolog di web Humind.
 2. Pengguna melihat daftar kartu psikolog yang memuat: Foto profesional, Nama & Gelar, Nomor SIPP terverifikasi, Spesialisasi Masalah, dan Tarif per sesi.
-3. Pengguna memilih salah satu atau lebih filter masalah (contoh: klik filter *"Burnout Tugas"*).
+3. Pengguna memilih salah satu atau lebih filter masalah (contoh: klik filter *"Burnout Tugas"* atau *"Krisis Arah Karir"*).
 4. Sistem memfilter daftar psikolog secara instan sesuai kriteria masalah yang relevan.
 5. Pengguna mengklik kartu psikolog untuk melihat profil lengkap (biografi singkat, pendekatan konseling, ulasan/testimoni terkurasi).
 
@@ -233,7 +260,7 @@ Berdasarkan analisis kebutuhan pengguna (mahasiswa) dan kapasitas tim beranggota
 
 #### Acceptance Criteria (AC-1.2):
 - [ ] Seluruh kartu psikolog menampilkan Foto, Nama Lengkap + Gelar, Badge "SIPP Terverifikasi: [Nomor SIPP]", Kategori Spesialisasi, dan Tarif Per Sesi (dalam IDR).
-- [ ] Tersedia 4 tombol pill filter masalah khas mahasiswa yang berfungsi menyaring hasil daftar secara dinamis.
+- [ ] Tersedia 6 tombol pill filter masalah khas mahasiswa yang berfungsi menyaring hasil daftar secara dinamis.
 - [ ] Halaman detail profil memuat ringkasan latar belakang profesional dan pendekatan konseling psikolog.
 
 ---
@@ -246,23 +273,32 @@ Berdasarkan analisis kebutuhan pengguna (mahasiswa) dan kapasitas tim beranggota
 - **Prekondisi:** Pengguna telah memilih profil psikolog dan masuk ke alur reservasi.
 
 #### Business Rules (BR-1.3):
-1. **Durasi Sesi Standar:** Tiap sesi konseling chat berdurasi 60 menit per reservasi.
+1. **Durasi Sesi Standar:** Tiap sesi telekonseling berdurasi 60 menit per reservasi dengan dukungan multi-moda fleksibel (Video Call, Voice Call, atau Chat Teks).
 2. **Buffer Time Antar-Sesi:** Sistem memberikan jeda otomatis minimal 15 menit antara satu sesi dengan sesi berikutnya agar psikolog memiliki waktu istirahat dan mencatat evaluasi.
 3. **Locking Slot Sementara:** Ketika pengguna memilih suatu slot jam dan melangkah ke halaman pembayaran, slot tersebut dikunci (*reserved/locked*) selama maksimal 15 menit. Jika pembayaran tidak diselesaikan dalam 15 menit, slot otomatis terbuka kembali untuk publik.
 4. **Batas Waktu Reservasi:** Pengguna hanya dapat memesan slot paling lambat 2 jam sebelum jam praktik dimulai (*lead time buffer*).
-5. **Formulir Pra-Konseling Singkat (Pre-Counseling Intake Form):**
+5. **Pemilihan Preferensi Metode Konseling:**
+   Pengguna dapat menentukan preferensi awal metode interaksi:
+   - **Video Call (Tatap Muka Virtual):** Mode tatap muka dua arah untuk kedalaman empati, ekspresi mikro, dan koneksi manusiawi yang nyata.
+   - **Voice Call (Panggilan Suara Langsung):** Mode suara tanpa video, sangat ideal bagi mahasiswa yang ingin mendengar suara psikolog secara langsung namun tetap menjaga privasi wajah (sangat selaras dengan Mode Curhat Anonim) atau saat kuota internet terbatas.
+   - **Chat Teks Konseling:** Mode obrolan teks real-time bagi mahasiswa yang lebih nyaman mengekspresikan pikiran melalui tulisan.
+   *(Catatan: Preferensi ini dapat disesuaikan kembali secara fleksibel di dalam ruang sesi konseling).*
+6. **Formulir Pra-Konseling Singkat (Pre-Counseling Intake Form):**
    Untuk memaksimalkan efektivitas sesi 60 menit dan meniru *best practice* platform konseling klinis (ala Riliv), sebelum checkout pengguna wajib mengisi **3 pertanyaan singkat**:
    - **Pertanyaan 1 (Mood Meter Saat Ini):** Skala emosi 1–10 atau pilihan 5 indikator (*Sangat Berat/Cemas, Tertekan, Netral, Mulai Tenang, Baik*).
    - **Pertanyaan 2 (Poin yang Mengganjal):** Teks singkat (1–3 kalimat) mengenai hal utama yang paling membebani pikiran saat ini (misal: "Buntu revisi bab 4 dan takut bertemu dosen penguji").
    - **Pertanyaan 3 (Ekspektasi dari Sesi Konseling):** Pilihan cepat tujuan sesi (*"Hanya butuh didengarkan tanpa penghakiman"*, *"Butuh saran praktis/strategi koping"*, *"Butuh sudut pandang objektif/netral"*).
    - Data asesmen awal ini otomatis disematkan pada kartu ringkasan klien di panel psikolog sebelum sesi dimulai.
+7. **Sinergi Otomatis Daily Mood Tracker ke Intake Form (Frictionless Booking):**
+   - Apabila pengguna memiliki riwayat catatan pada fitur *Daily Wellness* dalam 7 hari terakhir, antarmuka menyediakan tombol satu-klik: *"📋 Gunakan Rangkuman Mood & Pemicu 7 Hari Terakhir"*.
+   - Mengaktifkan opsi ini akan mengisikan skor rata-rata emosi pada Pertanyaan 1 dan menyematkan ringkasan tag pemicu (contoh: `#Skripsi`, `#TidurBerantakan`) ke kartu konteks psikolog, membebaskan mahasiswa dari keharusan mengetik ulang keluhannya saat sedang lelah berpikir.
 
 #### Main Flow (Alur Utama):
 1. Dari halaman profil psikolog, pengguna mengklik tombol *"Jadwalkan Konsultasi"*.
 2. Pengguna disajikan tampilan kalender interaktif yang memuat tanggal yang tersedia (maksimal hingga 14 hari ke depan).
 3. Pengguna memilih tanggal, dan sistem memuat daftar slot jam yang masih berstatus *"Tersedia"*.
 4. Pengguna memilih salah satu slot waktu (misal: 19.00 - 20.00 WIB).
-5. Pengguna melengkapi formulir pra-konseling 3 pertanyaan (Mood Meter, Poin yang Mengganjal, dan Ekspektasi Sesi), serta menentukan mode identitas (Gunakan Nama Asli atau Mode Curhat Anonim).
+5. Pengguna memilih preferensi metode (*Video Call*, *Voice Call*, atau *Chat Teks*), melengkapi formulir pra-konseling 3 pertanyaan (dapat memanfaatkan tombol instan *Gunakan Rangkuman Mood 7 Hari Terakhir*), serta menentukan mode identitas (Nama Asli atau Mode Curhat Anonim).
 6. Pengguna mengklik *"Lanjut ke Pembayaran"*, dan sistem mengunci slot tersebut selama batas waktu checkout 15 menit.
 
 #### Alternative & Edge Cases:
@@ -273,8 +309,10 @@ Berdasarkan analisis kebutuhan pengguna (mahasiswa) dan kapasitas tim beranggota
 #### Acceptance Criteria (AC-1.3):
 - [ ] Pengguna dapat melihat tanggal dan jam praktik psikolog yang diperbarui secara real-time.
 - [ ] Slot waktu yang sudah dibooking oleh klien lain berstatus *disabled* / tidak dapat diklik.
+- [ ] Terdapat pilihan preferensi metode sesi (Video Call, Voice Call, Chat Teks).
 - [ ] Formulir pra-konseling (3 pertanyaan: mood scale, poin masalah, ekspektasi sesi) muncul sebelum menuju pembayaran dan divalidasi dengan baik.
-- [ ] Data formulir pra-konseling tersimpan dan dapat dilihat oleh psikolog sebelum sesi chat dimulai.
+- [ ] Tersedia tombol integrasi untuk mengimpor data mood & pemicu 7 hari terakhir ke formulir pra-konseling secara instan (*one-click auto-fill*).
+- [ ] Data formulir pra-konseling tersimpan dan dapat dilihat oleh psikolog sebelum sesi dimulai.
 - [ ] Slot waktu otomatis terkunci selama 15 menit saat pengguna berada di tahap checkout pembayaran.
 - [ ] Sistem mencegah secara absolut terjadinya *double-booking* pada slot psikolog yang sama.
 
@@ -315,56 +353,60 @@ Berdasarkan analisis kebutuhan pengguna (mahasiswa) dan kapasitas tim beranggota
 
 ---
 
-### Fitur 1.5: Ruang Konsultasi Web (Encrypted Real-Time Chat Consultation)
+### Fitur 1.5: Ruang Telekonseling Terpadu (Encrypted Video Call, Voice Call, & Real-Time Chat Consultation)
 
 - **Tujuan Fitur:**  
-  Menyediakan ruang interaksi konseling berbasis teks yang aman, privat, terenkripsi, dan intuitif bagi pengguna serta psikolog untuk melaksanakan sesi terapi tanpa hambatan teknis.
-- **Aktor:** Pengguna (Client/Alias), Psikolog Mitra, Sistem Chat Server.
+  Menyediakan ruang telekonseling multi-moda yang aman, privat, terenkripsi, dan intuitif yang memfasilitasi interaksi **Video Call** (tatap muka visual untuk empati mendalam & ekspresi mikro), **Voice Call** (panggilan audio langsung untuk kenyamanan privasi ekstra), serta **Real-Time Chat** pendukung, memastikan nilai manfaat konsultasi berbayar terasa nyata dan manusiawi.
+- **Aktor:** Pengguna (Client/Alias), Psikolog Mitra, Server Sinyal WebRTC / Media Provider (LiveKit / Agora / Daily).
 - **Prekondisi:** Status reservasi telah berstatus `PAID/CONFIRMED` dan waktu sesi telah tiba (atau 5 menit sebelum jadwal).
 
 #### Business Rules (BR-1.5):
-1. **Aksesibilitas Ruang Chat Berdasarkan Waktu:**
-   - Ruang konsultasi hanya dapat dibuka 5 menit sebelum jadwal sesi dimulai.
-   - Sesi chat otomatis ditutup/dikunci menjadi status *Read-Only* setelah 60 menit berakhir, dengan toleransi waktu peringatan (*warning prompt*) pada 10 menit dan 5 menit menjelang akhir sesi.
-2. **Kerahasiaan & Privasi Tampilan:**
-   - Ruang chat menampilkan nama alias pengguna jika Mode Curhat Anonim diaktifkan.
-   - Dilarang menampilkan metadata sensitif (alamat email, IP address, nomor telepon klien) kepada pihak psikolog dalam ruang chat.
-3. **Integritas & Enkripsi Pesan:**
-   - Semua transmisi data chat antara browser dan server wajib menggunakan protokol terenkripsi (WSS / HTTPS dengan TLS).
-   - Data pesan di database dilindungi dengan enkripsi saat istirahat (*encryption at rest*).
-4. **Pembatasan Jenis Berkas (MVP):**
-   - Pada MVP Fase 1, chat hanya mendukung pesan teks murni dan indikator status baca (*read receipt*) serta pengetikan (*typing indicator*). Lampiran berkas gambar/dokumen ditangguhkan ke iterasi berikutnya `[TBD]`.
-5. **Rangkuman Pasca-Konseling & Lembar Latihan (Post-Session Summary & Action Plan):**
-   - Setelah sesi 60 menit berakhir, antarmuka psikolog memunculkan formulir *Post-Session Clinical Notes* yang wajib diisi (maksimal 1x24 jam setelah sesi):
-     1. **Key Takeaways (Poin Refleksi Kunci):** Rangkuman 1–2 paragraf mengenai inti masalah dan pemahaman baru yang dicapai selama sesi.
-     2. **Actionable Coping Exercise (Latihan Mandiri):** 1–3 rekomendasi tindakan nyata yang bisa dipraktikkan klien secara mandiri (misal: teknik pernapasan kotak 4-4-4-4, pembatasan jam belajar malam, atau *thought journaling*).
-     3. **Rekomendasi Tindak Lanjut:** Rekomendasi status (*"Kondisi Cukup Stabil - Perawatan Mandiri"* atau *"Disarankan Sesi Lanjutan 1-2 Minggu Lagi"*).
-   - Rangkuman ini otomatis diterbitkan ke tab *"Riwayat Sesi Saya"* di akun klien sehingga klien memiliki panduan nyata pasca-konseling.
-
+1. **Aksesibilitas Ruang Konsultasi Berdasarkan Waktu:**
+   - Ruang konsultasi dapat diakses melalui tombol *"Masuk Ruang Konseling"* mulai 5 menit sebelum jadwal sesi dimulai.
+   - Sesi telekonseling otomatis selesai setelah durasi 60 menit berakhir, dengan banner peringatan lembut (*warning prompt*) pada 10 menit dan 5 menit menjelang akhir sesi.
+2. **Multi-Moda Interaksi Fleksibel (Video, Voice, & Chat):**
+   - Klien dan psikolog dapat berinteraksi secara fleksibel di dalam satu ruangan terpadu:
+     - **Mode Video Call:** Kamera aktif dua arah untuk sesi tatap muka interaktif.
+     - **Mode Voice Call (Audio-Only):** Kamera dimatikan, hanya mikrofon yang aktif. Sangat cocok bagi mahasiswa yang ingin curhat dengan intonasi suara langsung namun belum siap bertatap muka, atau saat koneksi internet kosan sedang tidak stabil.
+     - **Side-Panel Text Chat:** Obrolan teks real-time yang tetap dapat dibuka berdampingan dengan panggilan video/audio untuk membagikan tautan materi koping, catatan reflektif, atau jika salah satu pihak mengalami kendala mikrofon.
+3. **Kerahasiaan & Privasi Mode Anonim pada Panggilan:**
+   - Apabila pengguna mengaktifkan **Mode Curhat Anonim**, nama yang tampil pada panel video dan chat adalah `Alias Name`.
+   - Jika pengguna memilih mematikan kamera (mode suara), antarmuka menampilkan avatar tenang (*peaceful placeholder avatar*) dengan nama alias pengguna, tanpa membocorkan identitas visual.
+   - Psikolog dianjurkan menyalakan kamera untuk memberikan rasa aman, profesionalisme, dan kehangatan manusiawi (*human warmth*).
+4. **Kontrol Media Pengguna & Psikolog:**
+   - Bar kendali mengambang (*floating control bar*) menyediakan tombol:
+     - `🎙️ Mute / Unmute Mikrofon`
+     - `📹 Nyalakan / Matikan Kamera`
+     - `💬 Buka / Tutup Panel Chat Teks`
+     - `🆘 Butuh Bantuan Mendesak? (Hotline Krisis Langsung)`
+     - `📞 Akhiri Sesi (End Call)`
+5. **Integritas & Enkripsi Media Stream:**
+   - Seluruh transmisi audio dan video dienkripsi secara end-to-end transport menggunakan standar WebRTC (DTLS-SRTP).
+   - Seluruh transmisi teks chat dilindungi enkripsi WSS/TLS dan data di basis data dilindungi enkripsi *at rest*.
+   - Menggunakan arsitektur WebRTC modern berbasis SDK teruji (seperti LiveKit Cloud atau Agora) dengan mekanisme *Adaptive Bitrate & Audio-Only Fallback* otomatis jika koneksi internet pengguna melemah.
 #### Main Flow (Alur Utama):
 1. Saat jam konseling tiba, pengguna dan psikolog mengklik tombol *"Masuk Ruang Konsultasi"* pada dashboard akun masing-masing.
-2. Kedua belah pihak terhubung ke ruang chat privat yang terisolasi. Panel psikolog menampilkan ringkasan profil klien (atau alias) beserta data *Pre-Counseling Intake Form* (skala mood, keluhan utama, dan harapan sesi).
-3. Terdapat indikator status sesi di bagian atas layar: Nama Psikolog & SIPP, Nama Pengguna (atau Nama Alias), dan Jam Durasi Konsultasi yang tersisa.
-4. Pengguna dan psikolog berkomunikasi secara real-time. Pesan terkirim seketika dengan status terkirim (*sent*) dan terbaca (*read*).
-5. Pada menit ke-50 (10 menit sebelum selesai), sistem memunculkan banner pengingat lembut: *"Waktu konseling tersisa 10 menit. Silakan mulai merangkum pembahasan hari ini."*
-6. Pada menit ke-60, sesi berakhir secara resmi. Input chat dinonaktifkan (read-only), dan sistem menampilkan formulir evaluasi bintang/rating kepada klien.
-7. Di sisi psikolog, sistem membuka form *Post-Session Summary*. Psikolog mengisi poin refleksi, panduan aksi koping, dan rekomendasi tindak lanjut.
-8. Klien menerima notifikasi bahwa catatan rangkuman sesi telah siap dan dapat diakses kapan saja melalui tab *"Riwayat Konseling"*.
+2. Pengguna melewati *Pre-Call Lobby* singkat untuk menguji mikrofon dan kamera (klien dapat memilih menyalakan kamera atau masuk dengan audio saja).
+3. Keduanya terhubung ke ruang telekonseling terpadu. Panel psikolog menampilkan kartu ringkasan klien beserta data *Pre-Counseling Intake Form* dan tren mood 7 hari terakhir.
+4. Sesi telekonseling berjalan secara real-time (Video/Voice + Side Chat). Indikator durasi sesi (60 menit) menghitung mundur secara sinkron di bagian atas layar.
+5. Pada menit ke-50 (10 menit sebelum selesai), sistem memunculkan banner pengingat lembut: *"Waktu konseling tersisa 10 menit. Silakan mulai merangkum sesi hari ini."*
+6. Pada menit ke-60, sesi panggilan dan chat ditutup secara otomatis, status sesi beralih menjadi `COMPLETED`, dan sistem menampilkan modal evaluasi bintang/rating (1–5 bintang serta ulasan pengalaman opsional) kepada klien.
+7. Riwayat sesi konseling (tanggal, nama psikolog, durasi) tersimpan di tab *"Riwayat Konseling"*.
 
 #### Alternative & Edge Cases:
-- **Koneksi Terputus di Tengah Sesi:** Klien atau psikolog yang kehilangan sinyal internet dapat masuk kembali ke ruang konsultasi selama durasi waktu 60 menit sesi belum berakhir tanpa kehilangan riwayat obrolan sesi tersebut.
-- **Psikolog Terlambat Hadir (No-Show):** Jika psikolog tidak masuk ke ruang chat dalam kurun waktu 15 menit pertama sejak jadwal dimulai, sistem memberikan opsi kepada klien untuk melaporkan kendala dan meminta penjadwalan ulang penuh (*reschedule*) atau *refund*.
-- **Psikolog Belum Mengisi Rangkuman Sesi:** Status riwayat sesi di klien menampilkan label *"Menunggu Rangkuman Psikolog"* dengan batas waktu maksimal pengisian $1 \times 24$ jam.
+- **Koneksi Terputus di Tengah Sesi:** Klien atau psikolog yang kehilangan sinyal dapat langsung masuk kembali ke ruang konsultasi selama durasi waktu 60 menit belum habis tanpa kehilangan riwayat pesan teks.
+- **Koneksi Internet Klien Lemah di Kosan:** Sistem otomatis mendowngrade resolusi video atau menghentikan video stream dan mempertahankan audio stream agar suara psikolog tetap jernih tanpa putus (*graceful degradation*).
+- **Psikolog Terlambat Hadir (No-Show):** Jika psikolog belum masuk ke ruang sesi dalam 15 menit pertama, klien dapat menekan tombol bantuan untuk mengajukan penjadwalan ulang penuh (*reschedule*) atau *refund*.
 
 #### Acceptance Criteria (AC-1.5):
-- [ ] Pengguna dan psikolog dapat bertukar pesan teks secara real-time tanpa perlu reload browser.
-- [ ] Panel psikolog dapat melihat ringkasan formulir pra-konseling klien sebelum obrolan dimulai.
+- [ ] Pengguna dan psikolog dapat terhubung dalam panggilan Video dan Audio dua arah secara real-time dengan latensi rendah (< 400ms).
+- [ ] Kontrol media (Mute/Unmute Mic, On/Off Kamera, End Call) berfungsi instan dan responsif di perangkat desktop maupun mobile browser.
+- [ ] Klien dapat memilih mematikan kamera dan menggunakan Voice Call dengan tampilan avatar nama alias yang tenang.
+- [ ] Panel chat teks dapat dibuka-tutup berdampingan dengan layar video tanpa mengganggu jalannya panggilan.
+- [ ] Panel psikolog dapat melihat ringkasan formulir pra-konseling dan riwayat tren mood klien sebelum obrolan dimulai.
 - [ ] Terdapat penunjuk sisa waktu sesi (*countdown timer*) yang sinkron antara sisi klien dan psikolog.
-- [ ] Nama yang ditampilkan di ruang chat klien adalah alias yang dipilih jika Mode Anonim aktif.
-- [ ] Ruang chat beralih ke mode read-only tepat setelah durasi 60 menit sesi berakhir.
-- [ ] Psikolog dapat menginput formulir rangkuman pasca-konseling (Key Takeaways, Action Plan, Rekomendasi).
-- [ ] Klien dapat membaca rangkuman dan panduan aksi dari psikolog di halaman riwayat sesi.
-- [ ] Riwayat pesan tersimpan aman dan dapat diakses kembali oleh pengguna dan psikolog yang bersangkutan sesuai masa retensi data.
+- [ ] Ruang sesi tertutup otomatis tepat setelah durasi 60 menit berakhir.
+- [ ] Klien disajikan modal evaluasi bintang (1–5) dan ulasan pengalaman konseling setelah sesi selesai.
 
 ---
 
@@ -411,80 +453,144 @@ Berdasarkan analisis kebutuhan pengguna (mahasiswa) dan kapasitas tim beranggota
 
 ---
 
-### Fitur 1.7: Humind Buddy – AI First-Listener & Psychologist Matcher (Chatbot Curhat Awal)
+### Fitur 1.7: Panic Button & Grounding Cepat 60 Detik (Visual Box Breathing Langsung di Beranda)
 
 - **Tujuan Fitur:**  
-  Menyediakan teman cerita pertama yang selalu siap 24/7 tanpa biaya, membantu mahasiswa memetakan benang kusut di kepala tanpa rasa cemas/gengsi, menjawab pertanyaan seputar alur konseling dan privasi, serta merekomendasikan profil psikolog yang paling relevan dengan masalah mereka.
-- **Aktor:** Pengguna (Guest / Mahasiswa), Mesin AI Humind Buddy (LLM API dengan guardrail etis ketat).
-- **Prekondisi:** Pengguna membuka platform web Humind (tersedia baik sebelum login maupun sesudah login).
+  Menyediakan pertolongan pertama relaksasi cepat (*instant grounding*) tanpa hambatan (*zero friction*) bagi mahasiswa yang sedang mengalami serangan panik (*panic attack*), sesak akibat cemas berlebih, atau ketegangan kognitif akut, tanpa perlu login atau membayar.
+- **Aktor:** Pengguna Umum (Guest / Mahasiswa).
+- **Prekondisi:** Pengguna membuka platform web Humind di perangkat mobile atau desktop.
 
 #### Business Rules (BR-1.7):
-1. **Peran Non-Klinis (Bukan Pengganti Terapi Manusia):**
-   - Humind Buddy secara transparan memposisikan diri sebagai *teman dengar awal (active listener)* dan pemandu navigasi, **bukan pengganti psikolog klinis profesional**. AI dilarang memberikan diagnosis medis formal (*no diagnostic labeling*).
-2. **Nada Bicara Hangat, Santun, & Gen-Z/Mahasiswa Friendly:**
-   - AI menggunakan bahasa yang ramah, hangat, validatif, dan menenangkan (contoh: *"Perasaanmu valid banget kok, wajar kalau kamu ngerasa capek setelah berjuang sejauh ini"*).
-3. **Problem Mapping & Smart Matcher:**
-   - Berdasarkan curhatan pengguna, AI membantu mengidentifikasi akar masalah ke salah satu dari 4 kategori utama (*Burnout Tugas, Kecemasan Finansial, Insomnia & Overthinking, Toxic Circle*).
-   - AI menampilkan 2–3 kartu ringkas psikolog mitra yang memiliki keahlian pada kategori tersebut dengan tombol aksi langsung: *"Lihat Profil & Jadwalkan"*.
-4. **FAQ & Barrier Breaker (Penghilang Ragu):**
-   - Mampu menjawab kekhawatiran mahasiswa seputar kerahasiaan: *"Apakah aman? Di Humind kamu bisa pakai Mode Curhat Anonim (nama samaran), jadi identitas aslimu tidak diketahui siapapun termasuk psikolog."*
-   - Menjelaskan transparansi tarif sesi (misal: "Tarif mulai dari Rp [X]/sesi 60 menit via QRIS tanpa biaya tersembunyi").
-5. **Crisis Safety Guardrail (Protokol Keselamatan Prioritas):**
-   - Apabila pengguna mengetik kata kunci atau frasa indikasi melukai diri sendiri (*self-harm*) atau keputusasaan akut/bunuh diri, AI **seketika menghentikan mode santai** dan memunculkan respons intervensi darurat: pesan penenang hangat beserta tombol panggilan langsung ke Hotline SEJIWA (119 ext 8), LISA (0811-3815-472), dan 112.
+1. **Aksesibilitas Tanpa Syarat (Zero Friction Access):**
+   - Tombol Grounding cepat disematkan secara mencolok di beranda (*hero section*) dan navbar/floating button:  
+     `"Lagi Panik atau Cemas? Tarik Napas Bersama Kami (60 Detik)"`.
+   - Dapat diakses langsung oleh siapa saja tanpa perlu mendaftar akun atau login terlebih dahulu.
+2. **Animasi Visual Terpandu (Box Breathing 4-4-4-4):**
+   - Menggunakan teknik ilmiah *Box Breathing* yang divalidasi secara klinis:
+     - **Tarik Napas (4 detik):** Lingkaran visual mengembang lembut dengan warna hijau sage/mint menenangkan.
+     - **Tahan Napas (4 detik):** Lingkaran stabil dengan teks panduan: *"Tahan sebentar..."*.
+     - **Hembuskan Perlahan (4 detik):** Lingkaran mengempis perlahan dengan teks: *"Lepaskan semua beban..."*.
+     - **Rehat Tenang (4 detik):** Lingkaran diam sejenak sebelum siklus berikutnya.
+3. **Audio Penenang Lembut (Opsional):**
+   - Disertai efek suara ambient tenang (suara deburan ombak lembut atau lonceng meditasi) yang dapat diaktifkan/dinonaktifkan (*toggle mute*) oleh pengguna.
+4. **Jalur Lanjutan Pasca-Grounding (Call-to-Action Tenang):**
+   - Setelah 3–5 siklus (sekitar 60–90 detik), layar memunculkan pesan validasi hangat:  
+     *"Napasmu sudah lebih teratur. Kamu aman di sini. Apa yang ingin kamu lakukan selanjutnya?"*
+     - Pilihan 1: *"Ulangi Latihan Pernapasan"*
+     - Pilihan 2: *"Curhat & Catat Perasaan di Jurnal Harian"*
+     - Pilihan 3: *"Cari Psikolog yang Memahami Masalahmu"*
+     - Pilihan 4: `🆘 Butuh Bantuan Darurat? (Hotline Bebas Pulsa 119 ext 8)`
 
 #### Main Flow (Alur Utama):
-1. Pengguna membuka web Humind dan melihat widget floating *"💬 Butuh Teman Cerita? / Humind Buddy"* di pojok kanan bawah.
-2. Pengguna mengklik widget. Jendela chat mengambang terbuka dengan sapaan hangat dan beberapa pilihan tombol cepat (*quick prompt chips*):
-   - *"Aku lagi overthinking skripsi & tugas"*
-   - *"Gak bisa tidur, pikiran muter terus"*
-   - *"Lagi capek sama circle pertemanan"*
-   - *"Gimana cara konseling di Humind?"*
-3. Pengguna mengetik curhatan atau mengklik salah satu chip.
-4. Humind Buddy merespon dengan empati, mendengarkan, dan memberikan 1–2 pertanyaan reflektif pendek.
-5. Setelah obrolan singkat (2–3 pertukaran pesan), Humind Buddy menyimpulkan secara lembut: *"Sepertinya kamu lagi mengalami burnout tugas akhir yang cukup berat ya. Mengurai hal ini bareng ahlinya bisa sangat membantu. Mau aku bantu pilihkan psikolog yang cocok?"*
-6. Humind Buddy menampilkan kartu psikolog yang direkomendasikan langsung di dalam gelembung pesan chat.
-7. Pengguna mengklik tombol *"Jadwalkan Sesi"* pada kartu tersebut dan langsung diarahkan ke halaman booking psikolog yang bersangkutan dengan data pra-konseling terisi otomatis.
-
-#### Alternative & Edge Cases:
-- **Pengguna Mengalami Krisis Akut:** AI langsung mengalihkan ke mode tanggap darurat, menyembunyikan opsi rekomendasi psikolog berbayar, dan memfokuskan antarmuka pada hotline bantuan gratis 24 jam.
-- **Pengguna Hanya Ingin Tanya Biaya/Teknis:** AI menjawab FAQ secara singkat, jelas, dan santun tanpa memaksa booking.
-- **Pengguna Menutup Jendela Chat:** Riwayat obrolan dengan bot disimpan di *local storage* browser (selama sesi aktif) agar pengguna dapat melanjutkan percakapan kapan saja tanpa mengulang dari awal.
+1. Pengguna membuka web Humind dan mengklik tombol *"Lagi Panik? Tarik Napas Bersama Kami"*.
+2. Layar membuka modal layar penuh (*zen mode modal*) dengan latar belakang gelap/redup yang menenangkan mata.
+3. Animasi visual lingkaran pernapasan otomatis mulai berdetak dengan ritme 4-4-4-4.
+4. Pengguna mengikuti ritme visual selama 60 detik.
+5. Setelah selesai, pengguna disajikan pilihan langkah berikutnya (jurnal mandiri, direktori psikolog, atau hotline krisis).
 
 #### Acceptance Criteria (AC-1.7):
-- [ ] Widget chatbot mengambang tersedia di halaman utama dan dapat dibuka/tutup dengan transisi halus di mobile dan desktop.
-- [ ] Tersedia tombol chip pintasan untuk topik-topik populer mahasiswa.
-- [ ] Chatbot merespon dengan cepat (< 3 detik) menggunakan gaya bahasa empatis dan hangat.
-- [ ] Chatbot berhasil memetakan obrolan pengguna dan menampilkan kartu psikolog yang relevan.
-- [ ] Tautan pada kartu psikolog di dalam chatbot dapat diklik dan langsung mengarahkan ke alur reservasi.
-- [ ] Guardrail keamanan bekerja seketika menampilkan nomor darurat jika terdeteksi indikasi krisis keselamatan diri.
+- [ ] Tombol Grounding Cepat dapat diakses langsung dari beranda tanpa harus login.
+- [ ] Animasi visual lingkaran napas Box Breathing (4-4-4-4) berjalan halus dan akurat secara tempo waktu.
+- [ ] Tersedia tombol kontrol audio (suara latar penenang) yang dapat dihidupkan/dimatikan.
+- [ ] Terdapat tombol keluar (*exit zen mode*) kapan saja dengan satu sentuhan.
+- [ ] Tampilan pasca-grounding memuat opsi lanjutan yang relevan dan tautan cepat ke hotline bantuan darurat.
 
 ---
 
-## 7. Roadmap Fitur: Phase 2 (Retensi & Wellness Mandiri)
+### Fitur 1.8: Daily Wellness – Daily Mood Tracker, Guided Micro-Journaling, & Coping Habit Check-in
 
-Fitur-fitur pada Fase 2 dirancang untuk meningkatkan retensi pengguna (*daily active users*), menjaga kesehatan mental harian sebelum masalah memuncak, dan membangun kebiasaan positif tanpa membebani kapasitas tim pada fase awal:
+- **Tujuan Fitur:**  
+  Menyediakan ruang perawatan diri harian (*self-care & emotional check-in*) yang mudah, cepat, dan privat untuk membantu mahasiswa mengenali pola suasana hati, menyalurkan pikiran yang menumpuk melalui jurnal terpandu, membangun kebiasaan koping positif, serta mengintegrasikan data tren emosi ke sesi konseling psikolog dan asisten AI Humind Buddy.
+- **Aktor:** Pengguna (Mahasiswa Terautentikasi), Psikolog Mitra (Penerima Insight Klinis), Humind Buddy (Penerima Konteks Emosi).
+- **Prekondisi:** Pengguna telah memiliki akun dan login ke platform web Humind.
 
-### 7.1. Audio Meditasi & Sleep Aid
-- **Deskripsi:** Modul pemutar audio mandiri yang memuat panduan pernapasan terstruktur (metode *Box Breathing* 4-4-4-4 untuk meredakan serangan panik/kecemasan) serta kurasi audio *soundscape* penenang tidur (hujan lembut, white noise, ambient malam) untuk mahasiswa yang mengalami insomnia.
+#### Business Rules (BR-1.8):
+1. **Quick Mood Check-in (< 15 Detik):**
+   - Menggunakan skala 5 indikator emosi visual yang ramah mahasiswa:
+     - 😫 `1 - Burnout / Sangat Berat`
+     - 😰 `2 - Cemas / Overthinking`
+     - 😐 `3 - Netral / Biasa Aja`
+     - 😌 `4 - Tenang / Mulai Lega`
+     - 😊 `5 - Bersemangat / Stabil`
+   - Disertai pilihan *Pill Tags* pemicu kontekstual (bisa multi-select): `#Skripsi`, `#TugasKuliah`, `#UangKos`, `#Pertemanan`, `#Keluarga`, `#TidurBerantakan`, `#Karir`, `#Asmara`.
+   - Pengguna dapat mengisi check-in mood lebih dari 1 kali per hari, namun visual kalender/dashboard menampilkan status mood terkini atau rata-rata harian.
+2. **Guided Micro-Journaling (Bebas Stres Tanpa Blank Page Syndrome):**
+   - Mahasiswa sering mengalami kebuntuan saat melihat halaman kosong (*blank canvas anxiety*). Sistem menyediakan 3 kartu template pemandu refleksi (*guided prompts*):
+     - **Brain Dump (Urai Benang Kusut):** *"Tuliskan apapun yang paling bikin kepalamu penuh dan berisik hari ini tanpa perlu difilter..."*
+     - **Gratitude / Kemenangan Kecil:** *"Satu hal kecil apa yang patut kamu syukuri atau berhasil kamu lewati hari ini?"*
+     - **Refleksi Kendali Diri (Locus of Control):** *"Apa bagian dari masalah ini yang bisa kamu kendalikan, dan apa yang harus kamu relakan?"*
+   - Dilengkapi penghitung kata (*word count*) minimal yang tidak memaksa (cukup 1–3 kalimat sudah dianggap berhasil).
+3. **Coping Micro-Habit Checklist:**
+   - 3 kebiasaan harian mikro yang dapat dicentang:
+     - [ ] Hidrasi cukup (minum air 2L)
+     - [ ] Rehat layar & peregangan (15 menit)
+     - [ ] Latihan pernapasan relaksasi 2 menit (tersedia tombol cepat untuk memandu animasi *Box Breathing* visual 4-4-4 langsung di web)
+4. **Integrasi Ekosistem Lintas Modul (Killer Feature Capstone):**
+   - **Koneksi ke Humind Buddy (AI):** Humind Buddy dapat membaca ringkasan tren emosi 3–7 hari terakhir pengguna untuk memberikan sambutan empatis yang terpersonalisasi (misal: *"Hai, aku lihat 3 hari ini kepalamu lagi cukup penuh karena #Skripsi. Pelan-pelan ya, kamu sudah hebat bertahan sejauh ini"*).
+   - **Koneksi ke Psikolog (Clinical Insight):** Saat pengguna memesan sesi konseling, grafik tren mood 7 hari terakhir dan ringkasan tag pemicu otomatis dilampirkan pada *Pre-Counseling Card* di panel psikolog untuk mempercepat pemahaman konteks klien.
+5. **Privasi & Keamanan Data Jurnal:**
+   - Tulisan jurnal bersifat privat mutlak (*client confidential*).
+   - Teks jurnal disimpan dengan enkripsi di database.
+   - Konten teks detail jurnal **tidak dibagikan ke psikolog secara otomatis**, kecuali pengguna secara sadar memilih tombol centang: *"Bagikan catatan jurnal ini sebagai lampiran sesi konseling saya"*.
+
+#### Main Flow (Alur Utama):
+1. Pengguna membuka dashboard Humind dan masuk ke tab *"Daily Wellness"* (atau widget ringkas di beranda).
+2. Pengguna memilih emoji mood hari ini dan menekan 1–2 tag pemicu utama.
+3. Sistem menyimpan check-in mood, memperbarui *streak calendar* visual 7 hari terakhir, dan menampilkan pesan afirmasi hangat: *"Terima kasih sudah jujur dengan perasaanmu hari ini."*
+4. Pengguna dapat memilih untuk menulis jurnal singkat dengan mengklik salah satu *Guided Prompt*, mengetikkan beberapa kalimat, lalu menekan *"Simpan Jurnal"*.
+5. Pengguna dapat mencentang micro-habit harian atau menjalankan panduan visual latihan pernapasan 2 menit.
+
+#### Alternative & Edge Cases:
+- **Deteksi Emosi Ekstrem Berturut-turut:** Jika pengguna mencatat skor mood `1` (*Burnout / Sangat Berat*) selama 3 hari berturut-turut, sistem memunculkan kartu rekomendasi hangat: *"Pikiranmu sepertinya sedang memikul beban yang sangat berat. Meringankannya bersama ahli mungkin bisa membantumu. Mau bicarakan ini dengan konselor kami atau ngobrol dulu bareng Humind Buddy?"*
+- **Pengguna Menghapus Catatan Jurnal:** Pengguna berhak menghapus entri jurnal lamanya secara permanen (*hard delete*) untuk menjaga kenyamanan privasi.
+
+#### Acceptance Criteria (AC-1.8):
+- [ ] Tersedia antarmuka pemilih skala mood 1-5 dengan emoji dan chip tag pemicu masalah khas mahasiswa.
+- [ ] Visualisasi tren mood 7–30 hari ditampilkan dalam bentuk kartu kalender warna/grafik yang responsif.
+- [ ] Pengguna dapat memilih 1 dari 3 template prompt jurnal dan menyimpan teks refleksi secara aman.
+- [ ] Riwayat jurnal tersimpan dan dapat dibaca kembali oleh pengguna dengan tanda waktu (*timestamp*).
+- [ ] Tersedia panduan visual animasi pernapasan relaksasi sederhana di sisi antarmuka web.
+- [ ] Ringkasan tren mood 7 hari dapat dilihat oleh psikolog di panel intake konseling jika sesi aktif.
+
+---
+
+## 7. Roadmap Fitur: Phase 2 (Retensi Lanjutan, AI Buddy 24/7, & Ekspansi Native Mobile)
+
+Fitur-fitur pada Fase 2 dirancang untuk memperluas kapabilitas retensi pengguna (*daily active users*), utilisasi fitur perangkat keras native smartphone, kecerdasan buatan terpersonalisasi, dan membangun kebiasaan positif yang lebih mendalam:
+
+### 7.1. Humind Buddy – AI First-Listener & Psychologist Matcher (Integrasi LLM 24/7)
+- **Deskripsi:** Sahabat curhat awal berbasis AI (LLM API dengan guardrail ketat) yang aktif 24/7 tanpa biaya, membantu mahasiswa memetakan benang kusut di kepala tanpa rasa malu/gengsi, menjawab pertanyaan seputar privasi & tarif, serta merekomendasikan psikolog yang paling relevan.
+- **Rasional:** Di Fase 1 (MVP), widget ditampilkan sebagai kartu teaser interaktif berstatus *"Coming Soon"* untuk menjaga fokus tim pada telekonseling utama. Di Fase 2, bot diaktifkan penuh dengan integrasi API LLM (Gemini) dan protokol keselamatan krisis otomatis.
+
+### 7.2. Audio Meditasi & Sleep Aid
+- **Deskripsi:** Modul pemutar audio mandiri yang memuat panduan pernapasan terstruktur serta kurasi audio *soundscape* penenang tidur (hujan lembut, white noise, ambient malam) untuk mahasiswa yang mengalami insomnia.
 - **Rasional:** Menjawab langsung problem insomnia mahasiswa di luar jam sesi konseling berbayar.
 
-### 7.2. Mood Tracker & Jurnal Harian
-- **Deskripsi:** Antarmuka pencatatan emosi harian (*emotional check-in*) yang sederhana (memilih emoji suasana hati, tingkat energi, dan 1-2 kalimat refleksi pendek).
-- **Integrasi dengan Konseling:** Riwayat grafik mood 7 hari terakhir dapat dipilih oleh pengguna untuk dibagikan secara otomatis kepada psikolog sebagai pengantar sebelum sesi konseling dimulai.
+### 7.3. Pola Analisis Emosi Lanjutan (AI Mood Trend Insights & Predictive Journaling)
+- **Deskripsi:** Peningkatan tingkat lanjut dari modul Daily Wellness Fase 1. Menggunakan pemrosesan bahasa alami (NLP) untuk mendeteksi pergeseran pola kognitif (*cognitive distortion detection*) dari tulisan jurnal pengguna dari waktu ke waktu, serta memberikan saran artikel atau latihan koping yang presisi.
+- **Sinkronisasi Offline Mobile:** Di Fase 2 (React Native), jurnal dan mood check-in dapat ditulis secara offline di perangkat saat koneksi internet kampus terputus dan disinkronisasikan otomatis ketika kembali online.
 
-### 7.3. Artikel Edukasi Singkat (Micro-Articles)
+### 7.4. Artikel Edukasi Singkat (Micro-Articles)
 - **Deskripsi:** Konten bacaan edukatif berbasis riset yang dikurasi khusus oleh tim (Product Research/Fadiyah) dengan format bacaan kilat 2-3 menit.
 - **Fokus Topik:** Teknik manajemen waktu skripsi tanpa stres, mekanisme koping (*coping mechanisms*) saat pekan ujian, mengenali *toxic relationship*, dan cara mengatasi sindrom imposter (*imposter syndrome*).
 
-### 7.4. Telekonseling Berbasis Video Call (Next Iteration)
-- **Deskripsi:** Menambahkan saluran konsultasi tatap muka visual berbasis WebRTC bagi pengguna yang menginginkan interaksi langsung dengan psikolog setelah merasa nyaman melalui sesi chat.
+### 7.5. Group Support & Peer Sharing Circles (Ruang Saling Dengar Terpandu)
+- **Deskripsi:** Menambahkan sesi konseling kelompok kecil (4–6 mahasiswa) dengan topik spesifik (misal: *"Pejuang Skripsi Semester Akhir"* atau *"Menghadapi Quarter-Life Crisis"*) yang difasilitasi secara terarah oleh seorang psikolog atau konselor sebaya (*peer counselor*).
+- **Rasional:** Menawarkan alternatif konseling dengan tarif yang jauh lebih terjangkau (*split-cost*) bagi mahasiswa sekaligus menumbuhkan rasa saling menguatkan (*shared validation*) bahwa mereka tidak berjuang sendirian.
 
-### 7.5. Aplikasi Mobile Native (React Native / Expo)
+### 7.6. Aplikasi Mobile Native (React Native / Expo)
 - **Deskripsi:** Menghadirkan aplikasi mobile multi-platform (Android & iOS) yang didistribusikan melalui Google Play Store untuk memaksimalkan retensi dan utilisasi perangkat keras smartphone.
 - **Fitur Khusus Native:**
   1. **Native Push Notifications:** Pengingat otomatis 15 menit dan 5 menit sebelum sesi konseling dimulai untuk meminimalisasi tingkat ketidakhadiran (*no-show*).
   2. **Background Audio Player:** Memungkinkan panduan pernapasan (*box breathing*) dan audio relaksasi tidur (*soundscapes*) tetap berputar di latar belakang saat layar ponsel terkunci.
   3. **Local Offline Cache:** Kemampuan menyimpan draf jurnal emosi dan mengunduh artikel edukasi untuk dibaca saat koneksi internet kampus tidak stabil.
+
+### 7.7. Humind for Campus (B2B2C / Student Assistance Program - SAP)
+- **Deskripsi:** Membuka kanal kemitraan resmi dengan institusi perguruan tinggi, fakultas, rektorat, dan BEM di Indonesia untuk menyediakan layanan konseling bersubsidi bagi mahasiswa.
+- **Fitur & Kapabilitas Kemitraan Kampus:**
+  1. **Single Sign-On (SSO) & Domain Email Kampus:** Mahasiswa dapat masuk langsung menggunakan kredensial email institusi kampus (contoh: `@student.ac.id`, Google Workspace for Education, atau SAML SSO).
+  2. **Alokasi Kuota Konseling Kampus:** Mahasiswa menerima jatah sesi konseling gratis (misal: 3–5 sesi per semester) yang ditanggung sepenuhnya oleh dana kemahasiswaan/beasiswa tanpa membebani dompet mahasiswa.
+  3. **Dashboard Analitik Agregat Kampus (*Campus Wellbeing Index*):** Menyediakan portal dashboard analitik bagi biro bimbingan konseling universitas untuk memantau tren beban mental mahasiswa (misal: lonjakan stres menjelang UTS/UAS, persentase burnout skripsi) **secara agregat dan 100% anonim** tanpa pernah membocorkan identitas maupun isi curhat individu. Hal ini membantu pimpinan universitas mengambil kebijakan akademik yang lebih sehat dan berempati.
 
 ---
 
@@ -575,6 +681,17 @@ Fitur-fitur pada Fase 2 dirancang untuk meningkatkan retensi pengguna (*daily ac
 | payment_status         |      | sent_at (TIMESTAMP)    |
 | expires_at             |      | is_read (bool)         |
 +------------------------+      +------------------------+
+
++------------------------+      +------------------------+
+|       mood_logs        |      |    journal_entries     |
++------------------------+      +------------------------+
+| id (PK)                |      | id (PK)                |
+| user_id (FK -> users)  |      | user_id (FK -> users)  |
+| mood_score (INT 1-5)   |      | prompt_type (VARCHAR)  |
+| trigger_tags (JSON/ARR)|      | content_encrypted(TEXT)|
+| notes (TEXT, nullable) |      | is_shared_to_counselor |
+| logged_at (TIMESTAMP)  |      | created_at (TIMESTAMP) |
++------------------------+      +------------------------+
 ```
 
 ### 9.3. Usulan Kontrak Endpoint API Awal (Proposed Endpoints Draft)
@@ -594,6 +711,11 @@ Fitur-fitur pada Fase 2 dirancang untuk meningkatkan retensi pengguna (*daily ac
 | `GET` | `/api/v1/counseling/:id/intake` | Mengambil rincian formulir asesmen pra-konseling klien | Psikolog Terkait / Klien |
 | `POST` | `/api/v1/counseling/:id/summary`| Menyimpan rangkuman sesi, latihan mandiri (*action plan*), dan rujukan tindak lanjut | Psikolog Terkait |
 | `GET` | `/api/v1/counseling/:id/summary`| Mengambil rangkuman pasca-konseling dan panduan latihan | Klien / Psikolog Terkait |
+| `POST` | `/api/v1/wellness/mood` | Menyimpan entri check-in mood harian dan tag pemicu | Pengguna Terautentikasi |
+| `GET` | `/api/v1/wellness/mood/history` | Mengambil riwayat tren mood 7–30 hari (untuk heatmap & kalender) | Pengguna Terautentikasi |
+| `POST` | `/api/v1/wellness/journal` | Menyimpan catatan jurnal refleksi terpandu (terenkripsi) | Pengguna Terautentikasi |
+| `GET` | `/api/v1/wellness/journal` | Mengambil riwayat entri jurnal pengguna | Pengguna Terautentikasi |
+| `DELETE`| `/api/v1/wellness/journal/:id` | Menghapus entri jurnal pribadi secara permanen | Pengguna Terautentikasi |
 
 ### 9.4. Strategi Arsitektur Multi-Platform & Kesiapan Mobile (Mobile-Ready Guidelines)
 Untuk mempermudah transisi dari Web ke Mobile App tanpa membongkar ulang sistem, tim menetapkan pedoman arsitektur berikut:
@@ -625,6 +747,7 @@ Untuk menjamin kejelasan akuntabilitas eksekusi di setiap modul:
 | **Model Data ERD & Skema Relasional** | I | I | C | **A / R** | I |
 | **Modul Real-Time Chat & Enkripsi** | I | C | C | **A / R** | C |
 | **Integrasi Payment Gateway (QRIS/VA)** | C | C | **A / R** | C | I |
+| **Daily Wellness (Mood Tracker & Journal)**| **A / R** | **R** | C | **A** | C |
 | **Kurasi Konten Edukasi & Kategori Masalah**| C | I | I | I | **A / R** |
 | **Penyusunan Test Cases & Manual Testing** | C | C | C | C | **A / R** |
 
@@ -657,7 +780,7 @@ Untuk menjamin kejelasan akuntabilitas eksekusi di setiap modul:
 Berikut adalah log status keputusan dan hal-hal yang masih dalam tahap perancangan:
 
 | ID | Topik Permasalahan | Detail Keputusan / Rancangan | Pemilik Keputusan | Status |
-| :---: | :--- | :--- | :---: | :---: |
+| :---: | :--- | :--- | :--- | :---: |
 | **OQ-01** | **Konsistensi Nama Brand** | Nama brand resmi disepakati 100% menggunakan **Humind** (Human – Mind) untuk seluruh antarmuka, aset, dan dokumen legal/proyek. | Seluruh Tim | **RESOLVED (DECIDED)** |
 | **OQ-02** | **Pemilihan Tagline Resmi** | Tagline resmi hero section ditetapkan menggunakan Opsi 1: **"Tempat Pikiranmu Beristirahat dan Didengar."** (Opsi 2 & 3 dicadangkan untuk materi promosi). | Rozin & Fadiyah | **RESOLVED (DECIDED)** |
 | **OQ-03** | **Mitra Payment Gateway** | Pemilihan vendor spesifik (Midtrans / Xendit / Tripay) ditunda ke fase perencanaan teknis. Desain sistem menggunakan *Payment Adapter Interface* agar *switch* vendor mudah dilakukan tanpa mengubah kode inti. | Atta & Rozin | **PLANNING (DEFERRED)** |
@@ -667,6 +790,7 @@ Berikut adalah log status keputusan dan hal-hal yang masih dalam tahap perancang
 | **OQ-07** | **Penyediaan AI Chatbot Entry Point** | Disepakati menambahkan **Humind Buddy** (AI First-Listener & Matcher) di Fase 1 untuk teman curhat 24/7, FAQ, pemetaan masalah, serta crisis guardrail sebelum booking. | Rozin & Alif | **RESOLVED (ADOPTED)** |
 | **OQ-08** | **Formulir Asesmen Pra-Konseling** | Disepakati menerapkan formulir pra-konseling ringkas (3 pertanyaan: mood meter 1-10, keluhan utama, dan ekspektasi sesi) pada alur booking demi efisiensi sesi 60 menit. | Fadiyah & Rozin | **RESOLVED (ADOPTED)** |
 | **OQ-09** | **Rangkuman Pasca-Konseling (Post-Session Notes)** | Disepakati psikolog wajib memberikan ringkasan sesi (Key Takeaways, Coping Action Plan, Rekomendasi) yang tersimpan di riwayat klien sebagai hasil nyata konseling. | Seluruh Tim | **RESOLVED (ADOPTED)** |
+| **OQ-10** | **Daily Wellness di Fase 1 (Web)** | Disepakati membawa fitur Daily Mood Tracker, Guided Micro-Journaling, dan Habit Check-in ke Fase 1 Web (PWA) untuk membangun retensi harian mahasiswa, memberi data klinis awal ke psikolog, serta mematangkan API sebelum ekspansi Fase 2 Mobile. | Rozin & Tim | **RESOLVED (ADOPTED)** |
 
 ---
 

@@ -33,8 +33,9 @@ Humind/
 │       │   ├── psychologists/       # Direktori Psikolog, Filter Masalah Mahasiswa
 │       │   ├── booking/             # Kalender Slot & Pre-Counseling Intake Form (3 Soal)
 │       │   ├── payment/             # Invoice QRIS Dinamis & Virtual Account
-│       │   ├── counseling/          # Ruang Chat 60 Menit & Post-Session Summary
-│       │   └── bot/                 # Widget Humind Buddy (AI First-Listener 24/7)
+│       │   ├── counseling/          # Ruang Telekonseling (Video, Voice Call, Chat 60 Menit)
+│       │   ├── wellness/            # Daily Mood Tracker, Guided Journaling, Habit & Panic Grounding 60s
+│       │   └── bot/                 # Teaser Humind Buddy (Widget Coming Soon Fase 2)
 │       ├── hooks/                   # Custom React Hooks (useAuth, useChat, useCountdown)
 │       ├── services/                # API Client (Axios/Fetch) & WebSocket Client
 │       ├── context/                 # State management global (AuthContext, ChatContext)

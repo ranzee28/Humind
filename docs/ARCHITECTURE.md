@@ -52,11 +52,12 @@ Humind/
 │       │   └── layout/              # Navbar, Footer, Header Navigasi, Container
 │       ├── features/                # ⚡ FEATURE-FIRST DIRECTORY (Isolasi Modul Bisnis)
 │       │   ├── auth/                # Login, Register, Mode Curhat Anonim Setup
-│       │   ├── psychologists/       # Katalog Psikolog, 4 Filter Masalah Mahasiswa
+│       │   ├── psychologists/       # Katalog Psikolog, 6 Filter Masalah Mahasiswa
 │       │   ├── booking/             # Kalender Slot & Pre-Counseling Intake Form (3 Soal)
 │       │   ├── payment/             # Invoice QRIS Dinamis & Virtual Account + Timer 15m
-│       │   ├── counseling/          # Ruang Chat 60m, Read-Only Lock, & Post-Session Summary
-│       │   └── bot/                 # Widget Humind Buddy (AI First-Listener 24/7)
+│       │   ├── counseling/          # Ruang Telekonseling (Video, Voice Call, Chat 60m)
+│       │   ├── wellness/            # Daily Mood Tracker, Guided Journaling, & Panic Grounding 60s
+│       │   └── bot/                 # Teaser Humind Buddy (Widget Coming Soon Fase 2)
 │       ├── hooks/                   # Custom Hooks (useAuth, useChat, useCountdownTimer)
 │       ├── services/                # Konfigurasi Axios/Fetch Client & Socket.io Client
 │       ├── context/                 # State management global (AuthContext, ChatContext)
