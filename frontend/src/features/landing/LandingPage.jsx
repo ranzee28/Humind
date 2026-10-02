@@ -18,7 +18,6 @@ import {
   Brain,
 } from 'lucide-react';
 import Button from '../../components/common/Button';
-import Badge from '../../components/common/Badge';
 
 export default function LandingPage() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -70,15 +69,6 @@ export default function LandingPage() {
 
   return (
     <div className="space-y-16 pb-20">
-
-      {/* ═══════════════════════════════════════════
-          HERO SECTION
-          Style ref : Serenemind — full-bleed editorial photo backdrop,
-                      fade to white, left-aligned copy overlay
-          Fixes     : 2-line headline (font scale), no emojis (Lucide icons),
-                      no orphan italic, no shadow-xs / backdrop-blur-xs
-          Dials     : VARIANCE 6 | MOTION 4 | DENSITY 3
-      ═══════════════════════════════════════════ */}
       <section id="hero" className="relative overflow-hidden">
 
         {/* ── Full-bleed editorial photo backdrop ── */}
@@ -124,16 +114,16 @@ export default function LandingPage() {
             </div>
 
             {/* Headline — 2 lines max, font scale tuned to fit */}
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-humind-neutral-900 tracking-tight leading-[1.12]">
-              Tempat Pikiranmu Didengar,{' '}
-              <em className="not-italic italic text-humind-primary-500">
-                Tanpa Penghakiman.
+            <h1 className="text-[32px] sm:text-[48px] font-semibold text-humind-neutral-900 leading-tight sm:leading-[52px]">
+              Tak Perlu Selalu Kuat,{' '}
+              <em className="not-italic text-humind-primary-600">
+                Ada Kami Untukmu.
               </em>
             </h1>
 
-            {/* Subtext — max 20 words */}
+            {/* Subtext */}
             <p className="text-base sm:text-lg text-humind-neutral-600 leading-relaxed max-w-[46ch]">
-              Konseling online bersama psikolog berlisensi SIPP — khusus untuk mahasiswa dan dewasa muda.
+              Bicarakan apa pun yang membebanimu bersama psikolog berlisensi resmi. Aman dan bisa pakai nama samaran.
             </p>
 
             {/* CTAs */}
@@ -164,15 +154,15 @@ export default function LandingPage() {
             <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-humind-neutral-500 pt-1">
               <span className="flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-humind-primary-400 shrink-0" aria-hidden="true" />
-                Psikolog Berizin SIPP
+                Psikolog Berlisensi SIPP
               </span>
               <span className="flex items-center gap-1.5">
                 <Clock className="w-4 h-4 text-humind-primary-400 shrink-0" aria-hidden="true" />
-                Sesi Penuh 60 Menit
+                Sesi Penuh 50 Menit
               </span>
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-humind-primary-400 shrink-0" aria-hidden="true" />
-                Harga Transparan
+                Tarif Terjangkau
               </span>
             </div>
           </div>
@@ -184,7 +174,7 @@ export default function LandingPage() {
       ═══════════════════════════════════════════ */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
-          <Badge variant="primary" size="md">Kategori Masalah Terarah</Badge>
+          <span className="section-eyebrow">Isu yang Umum Dihadapi</span>
           <h2 className="text-2xl sm:text-3xl font-bold text-humind-neutral-900">
             Apa yang Sedang Mengganjal Pikiranmu?
           </h2>
@@ -231,7 +221,7 @@ export default function LandingPage() {
       <section id="ruang-aman" className="bg-humind-primary-50/50 py-16 border-y border-humind-primary-100/60 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-            <Badge variant="sipp" size="md">Standar Pelayanan Humanis</Badge>
+            <span className="section-eyebrow">Ruang Aman Pikiranmu</span>
             <h2 className="text-2xl sm:text-3xl font-bold text-humind-neutral-900">
               Mengapa Memilih Humind?
             </h2>
@@ -249,7 +239,7 @@ export default function LandingPage() {
                 Psikolog Berlisensi Resmi SIPP
               </h3>
               <p className="text-sm text-humind-neutral-600 leading-relaxed">
-                Bukan sekadar konselor sebaya tanpa dasar klinis. Seluruh psikolog mitra telah diverifikasi Surat Izin Praktik Psikologi (SIPP) dari HIMPSI.
+                Seluruh psikolog mitra telah diverifikasi Surat Izin Praktik Psikologi (SIPP) dari HIMPSI.
               </p>
             </div>
 
@@ -261,7 +251,7 @@ export default function LandingPage() {
                 Mode Curhat Anonim (Alias)
               </h3>
               <p className="text-sm text-humind-neutral-600 leading-relaxed">
-                Merasa belum nyaman menggunakan nama asli? Kamu bebas memilih nama samaran saat sesi konseling tanpa perlu khawatir identitas kampusmu tersebar.
+                Kamu bebas memilih nama samaran saat sesi konseling tanpa perlu khawatir identitas kampusmu tersebar.
               </p>
             </div>
 
@@ -270,10 +260,10 @@ export default function LandingPage() {
                 <HeartHandshake className="w-6 h-6" aria-hidden="true" />
               </div>
               <h3 className="font-bold text-lg text-humind-neutral-900">
-                3 Pilihan Moda & Harga Jelas
+                3 Pilihan Metode & Harga Jelas
               </h3>
               <p className="text-sm text-humind-neutral-600 leading-relaxed">
-                Pilih metode paling nyaman: Chat interaktif, Voice Call, atau Video Call tatap muka. Tarif terstandarisasi ramah kantong mahasiswa tanpa biaya tersembunyi.
+                Pilih metode paling nyaman: Chat interaktif, Voice Call, atau Video Call. Tarif terstandarisasi ramah mahasiswa tanpa biaya tersembunyi.
               </p>
             </div>
           </div>
